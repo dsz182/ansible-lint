@@ -7,7 +7,6 @@ inputs:
 runs:
   using: docker
   image: 'Dockerfile'
-  entrypoint: /usr/local/bin/ansible-lint -c /config/.ansible-lint
   env:
     GITHUB_ACTIONS: "true"
     GITHUB_WORKFLOW: "{{ github.workflow.name }}"
