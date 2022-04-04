@@ -1,0 +1,15 @@
+name: Ansible Lint
+description: Run Ansible Lint
+inputs:
+  path:
+    required: false
+    default: "."
+runs:
+  using: docker
+  image: docker://quay.io/ansible/creator-ee:v0.4.1
+  entrypoint: /usr/local/bin/ansible-lint
+  env:
+    GITHUB_ACTIONS: "true"
+    GITHUB_WORKFLOW: "{{ github.workflow.name }}"
+  args:
+    - ${{ inputs.path }}
