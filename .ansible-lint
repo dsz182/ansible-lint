@@ -1,0 +1,6 @@
+parseable: true
+verbosity: 1
+skip_list:
+  - 'fqcn-builtins'
+  - 'new-line-at-end-of-file'
+quiet: true
