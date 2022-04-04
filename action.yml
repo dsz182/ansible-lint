@@ -6,7 +6,7 @@ inputs:
     default: "."
 runs:
   using: docker
-  image: 'Dockerfile'
+  image: docker://quay.io/ansible/creator-ee:v0.4.1
   entrypoint: /usr/local/bin/ansible-lint
   env:
     GITHUB_ACTIONS: "true"
